@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Персонажи
+{% endblock %}
+
+{% block body %}
+<div class="container my-5">
+    <h1>Игровой корабль:</h1>
+    <h5>Игровой корабль - корабль которым управляет игрок, перемещается на кнопки W A S D, может стрелять на ЛКМ.</h5>
+    <h5>Также вы можете таранить телом врагом и залетать в тыл для передышек.</h5>
+    <div class="rectangle-divider" bac></div>
+    <div style="display:flex; align-items:center;">
+    <div>
+        <h3 style="color: green;">•Урон - 20</h3>
+        <h3 style="color: green;"><br>•Здоровье - 202</h3>
+        <h3 style="color: green;"><br>•Тип персонажа - Управляемый</h3>
+        <h3 style="color: green;"><br>•Уровни обитания - Все</h3>
+    </div>
+    <img src="static/images/10.png" alt="" style="width:500px; margin-left:200px;">
+    </div>
+    <div class="rectangle-divider" bac></div>
+
+    <h1>Снайпер:</h1>
+    <h5>Снайпер - стандартный вражеский корабль базового типа. Снайпер является самым частым врагом в игре и появляется</h5>
+    <h5>уже на 1-м уровне.</h5>
+    <div class="rectangle-divider" bac></div>
+    <div style="display:flex; align-items:center;">
+    <div>
+        <h3 style="color: green;">•Урон - 20</h3>
+        <h3 style="color: green;"><br>•Здоровье - 140</h3>
+        <h3 style="color: green;"><br>•Тип персонажа - Базовый враг</h3>
+        <h3 style="color: green;"><br>•Уровни обитания - Любой сложности</h3>
+    </div>
+    <img src="static/images/7.png" alt="" style="width:500px; margin-left:110px;">
+    </div>
+    <div class="rectangle-divider" bac></div>
+
+    <h1>Разрушитель:</h1>
+    <h5>Разрушитель - является вражеским укреплением. Разрушитель обладает большим количеством здоровья, и распологается</h5>
+    <h5>на фронте, защищая врагов. Не является кораблем, поэтому не стреляет.</h5>
+    <div class="rectangle-divider" bac></div>
+    <div style="display:flex; align-items:center;">
+    <div>
+        <h3 style="color: green;">•Урон - *</h3>
+        <h3 style="color: green;"><br>•Здоровье - 1000</h3>
+        <h3 style="color: green;"><br>•Тип персонажа - Вражеское укрепление</h3>
+        <h3 style="color: green;"><br>•Уровни обитания - Любой сложности</h3>
+    </div>
+    <img src="static/images/11.png" alt="" style="width:500px; margin-left:90px;">
+    </div>
+    <div class="rectangle-divider" bac></div>
+
+    <h1>Элитный Снайпер:</h1>
+    <h5>Элитный Снайпер - элитный вражеский корабль усиленного типа. Элитный Снайпер выпускает сразу 3 пули, обладает</h5>
+    <h5>повышенным здоровьем и повышенной скоростью стрельбы.</h5>
+    <div class="rectangle-divider" bac></div>
+    <div style="display:flex; align-items:center;">
+    <div>
+        <h3 style="color: green;">•Урон одной пули - 20</h3>
+        <h3 style="color: green;"><br>•Здоровье - 400</h3>
+        <h3 style="color: green;"><br>•Тип персонажа - Опасный враг</h3>
+        <h3 style="color: green;"><br>•Уровни обитания - Средней+ сложности</h3>
+    </div>
+    <img src="static/images/8.png" alt="" style="width:500px; margin-left:80px;">
+    </div>
+    <div class="rectangle-divider" bac></div>
+
+    <h1>НЛО:</h1>
+    <h5>НЛО - первый игровой бос. НЛО обладает высоким количеством здоровья и 4-мя стадиям. Встречается один раз за игру.</h5>
+    <h5>Каждая новая стадия начинаетя при сносе четверти HP босса.</h5>
+    <h1><br>Стадии:</h1>
+    <h5>1-ая стадия - Тарелка перемещается вверх-вниз вслед за игроком вы пуская с интервалом в пол секунды 3 пули</h5>
+    <h5>2-ая стадия - Тарелка перемещается в центр и выпускает шквал пуль по всему экрану.</h5>
+    <h5>3-ая стадия - Тарелка перестает стрелять и начинает гонять за игроком по всему полю, чтобы протаранить.</h5>
+    <h5>4-ая стадия - Такая же, как и 2-ая, однако повышено число пуль.</h5>
+    <div class="rectangle-divider" bac></div>
+    <div style="display:flex; align-items:center;">
+    <div>
+        <h3 style="color: green;">•Урон одной пули - 20</h3>
+        <h3 style="color: green;"><br>•Здоровье - 4000</h3>
+        <h3 style="color: green;"><br>•Тип персонажа - БОС</h3>
+        <h3 style="color: green;"><br>•Уровни обитания - Высокой сложности</h3>
+    </div>
+    <img src="static/images/9.png" alt="" style="width:500px; margin-left:80px;">
+    </div>
+    <div class="rectangle-divider" bac></div>
+</div>
+{% endblock %}
+
+{% block str_on %}
+<li>
+    <a href="/" class="nav-link px-2 text-white">
+        Home
+    </a>
+</li>
+<li>
+    <a href="/characters" class="nav-link px-2 text-secondary">
+        Characters
+    </a>
+</li>
+<li>
+    <a href="/coments" class="nav-link px-2 text-white">
+        Coments
+    </a>
+</li>
+{% endblock %}
