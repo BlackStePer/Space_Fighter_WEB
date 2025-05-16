@@ -8,6 +8,11 @@
 <div class="container mt-5">
     <h1>Добавить коментарий об игре</h1>
     <form method="post">
+        {% if much == True %}
+        <textarea name="user" id="user" class="form-control" placeholder="Имя пользователя не должно превышать 40 символов!!!"></textarea><br>
+        {% else %}
+            <textarea name="user" id="user" class="form-control" placeholder="Введите ваш ник"></textarea><br>
+        {% endif %}
         <textarea name="text" id="text" class="form-control" placeholder="Введите коментарий"></textarea><br>
         <input type="submit" class="btn btn-success" value="Отправить">
         <div class="rectangle-divider" bac></div>
@@ -20,13 +25,10 @@
     <div class="list-group">
       <div class="list-group-item list-group-item-action flex-column align-items-start mb-3">
         <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">Иван Иванов</h5>
-          <small class="text-muted">{{ comment[1] }}</small>
+          <h5 class="mb-1">{{ comment[0] }}</h5>
+          <small class="text-muted">{{ comment[2] }}</small>
         </div>
-        <p class="mb-1">{{ comment[0] }}</p>
-        <div>
-          <button type="button" class="btn btn-sm btn-outline-secondary">Пожаловаться</button>
-        </div>
+        <p class="mb-1">{{ comment[1] }}</p>
       </div>
     </div>
     {% endfor %}
